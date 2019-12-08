@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Somar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p>Numero 1:</p>
+    <input type="number" id="soma1">
+    <p>Numero 2:</p>
+    <input type="number" id="soma2"><br><br>
+    <button id="pegaresultado" onclick="meuclick()">Exibir resultado</button><br><br>
+    <p>Este é o resultado</p>
+    <input type="number" id="mostraresultado">
+    <script>
+        function meuclick() {
+            var idinput1 = document.getElementById('soma1');
+            var idinput2 = document.getElementById('soma2')
+            var input1 = parseInt(idinput1.value);
+            var input2 = parseInt(idinput2.value);
+            var somar  = input1 + input2;
+            //Aqui ele mostra o resultado da soma
+            document.getElementById('mostraresultado').value = somar;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>5% de descontor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        hr{
+           margin-top: 20px;
+           margin-bottom: 20px;
+           border: 0;
+           border-top: 2px solid black;
+           
+           text-align: left;
+        }
+       </style>
+</head>
+<body>
+    <h3>5% de desonto</h3>
+    <p>Digite um número qualquer:</p>
+    <input type="number" id="soma1"><br><br>
+    <button id="pegaresultado" onclick="meuclick()">Exibir resultado</button>
+    
+    <script>
+        function meuclick() {
+            var idinput1 = document.getElementById('soma1');
+            var input1 = parseInt(idinput1.value);
+            
+            var resultado = (input1/100) * 5;
+           
+            var texto =  `<p>5% de ${input1} é ${resultado}</p>`;
+            document.getElementById('textoresto').innerHTML = texto;
+         
+        }
+      
+    </script>
+    <div class="hr" style="width: 40%"><hr></div>
+    <div id="textoresto">
+
+    </div>
+</body>
+</html>

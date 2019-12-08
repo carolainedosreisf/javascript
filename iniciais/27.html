@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Array 4</title>
+    </head>
+    <body>
+        <h2>JavaScript Array.filter()</h2>
+        
+        <p class="demo"></p>
+    </body>
+    <p id="demo2"></p>
+        <script>
+
+            var arg = [ 1, 2, 3, 4, 5].filter(function(value) {
+                return  value > 2;
+            });
+
+            document.getElementById("demo2").innerHTML = "Filtro (maiores de 2): " + arg;
+        </script>
+</html>

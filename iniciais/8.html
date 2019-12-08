@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Botões de cor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    button{
+        padding: 9px 13px;
+        margin-right: 20px;
+        border-radius: 4px;
+        background: white;
+        font-size: 16px;
+        border: solid 2px black;
+    }
+    </style>
+</head>
+<body>
+    <p>Click nos botões abaixo:</p>
+    <button id="verde" onclick="meuclick()">Verde</button>
+    <button id="vermelho" onclick="meuclick2()">Vermelho</button>
+    <button id="amarelo" onclick="meuclick3()">Amarelo</button>
+    <button id="rosa" onclick="meuclick4()">Rosa</button>
+    <button id="laranja" onclick="meuclick5()">Laranja</button>
+    <button id="azul" onclick="meuclick6()">Azul</button>
+    
+    <script>
+        function meuclick() {
+            var idverde = document.getElementById('verde');
+            idverde.style.background = 'green';
+        }
+        function meuclick2() {
+            var idvermelho = document.getElementById('vermelho');
+            idvermelho.style.background = 'red';
+        }
+        function meuclick3() {
+            var idamarelo = document.getElementById('amarelo');
+            idamarelo.style.background = 'yellow';
+        }
+        function meuclick4() {
+            var idrosa = document.getElementById('rosa');
+            idrosa.style.background = '#f79be9';
+        }
+        function meuclick5() {
+            var idlaranja = document.getElementById('laranja');
+            idlaranja.style.background = 'orange';
+        }
+        function meuclick6() {
+            var idazul = document.getElementById('azul');
+            idazul.style.background = 'blue';
+        }
+    </script>
+</body>
+</html>

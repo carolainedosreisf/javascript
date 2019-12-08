@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>contador for</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h3>Contador (for)</h3>
+    <p id="demo"></p>
+    <script>
+        var text = "";
+        var x;
+        for( x = 1; x <= 15; x++){
+            text = text +  "Repetição " + x + "<br>";
+        }
+   
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <br>
+    <h3>Contador (while)</h3>
+
+    <p id="demo2"></p>
+    <script>
+        var text = "";
+        var x = 1;
+        while( x <= 15){
+            text = text +  "Repetição " + x + "<br>";
+            x++;
+        }
+   
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+    
+    
+</body>
+</html>
+

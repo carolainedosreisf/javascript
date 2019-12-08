@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Multiplicação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h3>Multiplicação</h3>
+    <p>Numero 1:</p>
+    <input type="number" id="soma1">
+    <p>Numero 2:</p>
+    <input type="number" id="soma2"><br><br>
+    <button id="pegaresultado" onclick="meuclick()">Exibir resultado</button><br><br>
+    <p id="textox">Este é o resultado</p>
+    <input type="number" id="mostraresultado">
+    <script>
+        function meuclick(x, y) {
+            var idinput1 = document.getElementById('soma1');
+                var idinput2 = document.getElementById('soma2')
+                var y = parseInt(idinput1.value);
+                var x = parseInt(idinput2.value);
+            if (x !== null && y !== null){
+                
+                var texto = `Este é o resultado da multiplicação ${x} x ${y}`
+                var somar  = x * y;
+                //Aqui ele mostra o resultado da soma
+                document.getElementById('mostraresultado').value = somar;
+                document.getElementById('textox').innerHTML = texto;
+            }
+        }
+    </script>
+</body>
+</html>

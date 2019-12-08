@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Calculadora Simples</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <input type="number" class="valor1" placeholder=" Valor 1"> 
+                <select class="operacao">
+                    <option value="somar">Somar</option>
+                    <option value="subtrair">Subtrair</option>
+                    <option value="dividir">Dividir</option>
+                    <option value="multiplicar">multiplicar</option>
+                </select>
+                <input type="number" class="valor2" placeholder=" Valor 2"> 
+                <button onclick="calcular()">Calcular</button><br><br>
+                <span class="mostra" style="display:none">Resultado: </span>
+                <span class="resultado"></span>
+                
+            </div> 
+        </div>
+        
+
+        <script>
+            var valor1 = document.querySelector(".valor1")
+            var valor2 = document.querySelector(".valor2")
+            var operacao = document.querySelector(".operacao");
+            var mostra = document.querySelector(".mostra");
+            var resultado = document.querySelector(".resultado");
+            function calcular(){
+                if (valor1.value != "" && valor2.value != "" ){
+                    if (operacao.value == 'somar'){
+                        mostra.style.display =  'inline-block';
+                        resultado.innerHTML =  parseFloat(valor1.value) + parseFloat(valor2.value);
+                    }else if (operacao.value == 'subtrair'){
+                        mostra.style.display =  'inline-block';
+                        resultado.innerHTML =  parseFloat(valor1.value) - parseFloat(valor2.value);
+                    }else if (operacao.value == 'dividir'){
+                        if (parseFloat(valor2.value) == 0){
+                            mostra.style.display =  'none';
+                            resultado.innerHTML =  'Erro';
+                        }else{
+                             mostra.style.display =  'inline-block';
+                            resultado.innerHTML =  parseFloat(valor1.value) / parseFloat(valor2.value);
+                        }
+                    }else if (operacao.value == 'multiplicar'){
+                        mostra.style.display =  'inline-block';
+                        resultado.innerHTML =  parseFloat(valor1.value) * parseFloat(valor2.value);
+                    }
+                }else{
+                    mostra.style.display =  'none';
+                    resultado.innerHTML = 'Preencha os campos';
+                }
+                
+            }
+        </script>
+        
+    </body>
+</html>

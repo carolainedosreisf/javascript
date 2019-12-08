@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Forca</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css"  href="forca.css">
+        <link rel="icon" href="img2/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        <div class="contorno2">
+            <div class="container contorno">
+                <div class="row">
+                    
+                    <div class="col-md-6 left">
+                        <img src="img2/11.png"  id="forcadesenho">
+    
+                    </div>
+                    <div class="col-md-6 rigth">
+                        <div class="centro">
+                                <p id="demo"></p>
+                                <p id="demo2" style="display:none">11</p>
+                                <p id="jafoi"></p>
+                                <input id="letra" type="text"><button class="botao2" onclick="meuclick()">Enviar</button>
+                                <p id="amostra"></p>
+                                
+                                <div id="anderline"></div>
+                                <div id="error"></div>
+                                <div id="sucess"></div>
+                                <button type="button" class="botao" onclick="novojogo();" >Nova partida</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                
+                
+                <h4 class="modal-title">Você venceu!</h4>
+                
+                <div class="modal-body">
+                    <img src="img2/venceu.gif" id="venceu">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="novojogo();" >Nova partida</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-sm">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    
+                    
+                    
+                    
+                    <div class="modal-body">
+                        <p>Você perdeu!</p>
+                        <img src="img2/perdeu.png" id="venceu">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" onclick="novojogo();" >Nova partida</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        <script src="forca.js"></script>
+
+        
+    </body>
+</html>

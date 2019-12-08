@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>valor da div</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    button{
+        padding: 9px 13px;
+        margin-right: 20px;
+        border-radius: 4px;
+        background: white;
+        font-size: 16px;
+        border: solid 2px black;
+    }
+    </style> 
+</head>
+<body>
+    <div id="mostraresultado"></div>
+    <button id="verresultado" onclick="meuclick()">Mostrar Resultado</button>
+
+    <script>
+        function meuclick(){
+           var botao =  document.getElementById('verresultado').innerText;
+           if(botao == "Mostrar Resultado"){
+               document.getElementById('mostraresultado').innerHTML = "<p>Esse html veio do JavaScript...</p>";
+               document.getElementById('verresultado').innerHTML = "Ocultar Resultado"
+             }else if(botao == "Ocultar Resultado"){
+                document.getElementById('mostraresultado').innerHTML = "";
+                document.getElementById('verresultado').innerHTML = "Mostrar Resultado"
+             }
+        }
+        
+    </script>
+</body>
+</html>

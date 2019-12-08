@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array 9</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald');
+        li{
+            padding-bottom: 5px;
+            font-size: 16px;
+            font-family: 'Oswald', sans-serif;
+        }
+        li#par{
+         font-size: 18px !important;   
+         font-weight: 700;
+        }
+        </style>
+    </head>
+    <body>
+        <button onclick="meuclick()">Mostrae lista do array</button>
+        <ul class="demo"></ul>
+        
+        
+
+        <script>
+        
+        function meuclick(){
+            var nomes = ["ana", "carlos", "carol", "maria", "miguel", "joão"];
+            var i = 0;
+            var text = "";
+            for(;nomes[i];){
+                
+                if ( i == 0 || i%2 == 0 ){
+                    text = `${text} <li id="impar">${nomes[i]}</li>`;
+                }else{
+                    text = `${text} <li id="par">${nomes[i]}</li>`;
+                }
+                i++;
+            }
+            document.querySelector(".demo").innerHTML = text ;
+            
+        }
+
+        
+        </script>
+    </body>
+</html>

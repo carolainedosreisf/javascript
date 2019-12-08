@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Forca</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <style>
+        span{
+            padding-right: 10px;
+        }
+        #anderline2{
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: -5px;
+            line-height: 0;
+            letter-spacing: 7px;
+            
+            
+        }
+        </style>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <input id="letra" type="text"><button onclick="meuclick()">Enviar</button>
+        <p id="amostra"></p>
+        <p id="anderline2"></p>
+        <div id="anderline"></div>
+        <script>
+            fruta = ["maçã", "uva", "melão", "laranja", "banana", "melancia", "pessego"];
+            moveis = ["cama", "mesa", "armario", "pia","cadeira","ropeiro", "estante"];
+            sobremesa = ["gelatina", "pudim", "torta", "brigadeiro", "mousse", "sorvete", "frutas"];
+            var i = Math.floor(3*Math.random());
+            switch (i){
+                case 0:
+                text = fruta;
+                text2 = "frutas";
+                break;
+                case 1:
+                text = moveis;
+                text2 = 'moveis'
+                break;
+                case 2:
+                text = sobremesa;
+                text2 = 'sobremesas'
+                break
+            }
+            var i = Math.floor(7*Math.random());
+            document.getElementById("demo").innerHTML ="Dica: "+ text2 +"<br>";
+            var palavra = text[i];
+            var contandoLetras = palavra.length - 1;
+            
+
+            var anderline = "";
+            var anderline2 = "";
+
+            var x ;
+            for(x = 0; x <= parseInt(contandoLetras); x++){
+                anderline = anderline + "<span>___</span>";
+                anderline2 = anderline2  + `<span id="span${x}">` + palavra[parseInt(x)] + "</span>" ;
+                //document.getElementById("span0").style.display = "none";    
+               
+            }
+            document.getElementById("anderline").innerHTML = anderline;
+            document.getElementById("anderline2").innerHTML = anderline2;
+            
+            var id = "";
+            var id2 = "";
+            var id3 = "";
+
+            var i ;
+            for(i = 0; i <= parseInt(contandoLetras); i++){
+                
+               id = document.getElementById("span" + i)
+               id2 = id.style.display = "none";
+               id3 += id.innerText;    
+               
+            }
+            
+            //document.getElementById("demo2").innerHTML = id3;
+            
+            
+
+            function  meuclick(){
+                var palavra = text[i];
+                var letra = document.getElementById("letra").value;
+                var contandoLetras = palavra.length;
+                
+                if(palavra.includes(letra)){
+                    var id = "";
+                    var id2 = "";
+                    var id3 = "";
+
+                    var i ;
+                    for(i = 0; i <= parseInt(contandoLetras); i++){
+                        
+                        id = document.getElementById("span" + i)
+                        id2 = id.style.display = "none";
+                        id3 += id.innerText;    
+                        document.getElementById("span" + i).style.display = "block"
+                    }  
+                    
+                }     
+            }
+            
+
+        </script>
+    </body>
+</html>

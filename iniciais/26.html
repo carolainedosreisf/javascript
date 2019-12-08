@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array 3</title>
+    </head>
+    <body>
+
+        <h2>JavaScript Array.reduce()</h2>
+        <h3>1° caso:</h3>
+        <p>Argumento um (pega o primeiro elemento do array)<br>
+        Argumento dois (pega o ultimo elemento do array)<br>
+        Argumento tres (pega o segundo elemento do array)<br>
+        Argumento quatro (pega todos os elemento do array)<br>
+        ---------------------x-------------------------x---------------------</p>
+
+        <p id="demo"></p>
+
+        <script>
+        var numbers = [45, 4, 9, 16, 25];
+        var sum = numbers.reduce(myFunction);
+
+        document.getElementById("demo").innerHTML = "soma dos elemntos: " + sum;
+
+        function myFunction(a, b, c, d) {
+            return a + b;
+        }
+
+
+        </script>
+        ---------------------x-------------------------x---------------------<br>
+        <h3>2° caso:</h3>
+        <p>Argumento um (pega o primeiro elemento do array)<br>
+        Argumento dois (pega o seundo elemento do array)<br>
+        Argumento tres (pega o penultimo elemento do array)<br>
+        Argumento quatro (pega todos os elemento do array)<br>
+        ---------------------x-------------------------x---------------------</p>
+        <p id="demo2"></p>
+        <script>
+
+        var arg = [ 1, 2, 3, 4, 5].reduce(function(a, b, c, d) {
+            return  a + "-" + b;
+        });
+
+        document.getElementById("demo2").innerHTML = "Todos os elementos: " + arg;
+        </script>
+
+    </body>
+</html>

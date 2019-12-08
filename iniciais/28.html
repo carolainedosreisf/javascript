@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Array 4</title>
+    </head>
+    <body>
+        <h2>JavaScript Array.map()</h2>
+        <p>Argumento um (lista todos os elemntos)<br>
+            Argumento dois (mostra as posições dos elementos)<br>
+            Argumento tres (lista todos os elementos X sua quantidade de elementos)<br>
+            ---------------------x-------------------------x---------------------</p>
+        <p class="demo"></p>
+    </body>
+    <p id="demo2"></p>
+        <script>
+
+            var arg = [ 1, 2, 3, 4, 5].map(function(a, b, c) {
+                return  a * 2;
+            });
+
+            document.getElementById("demo2").innerHTML = "Multiplicando x2 cada elemento do array: " + arg;
+        </script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contar caractere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input type="text" id="meuinput">
+    <button onclick="meuclick()">Contar caracteres</button>
+    <script>
+        function meuclick() {
+            var inputexato = document.getElementById('meuinput');
+            var valorinput = inputexato.value;
+            var final = valorinput.length;
+
+            alert(final);
+        }
+    </script>
+</body>
+</html>

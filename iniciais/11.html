@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parametros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+     hr{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 2px solid black;
+        
+        text-align: left;
+     }
+    </style>
+</head>
+<body>
+    <div class="hr" style="width: 40%">
+            <hr>
+    </div>
+    <h3>Digite o numero 0 individualmente em um dos campos para iniciair o teste</h3>
+    <p>Numero 1:</p>
+    <input type="number" id="soma1">
+    <p>Numero 2:</p>
+    <input type="number" id="soma2"><br><br>
+    <button id="pegaresultado" onclick="meuclick()">Exibir resultado</button><br><br>
+    <p>Este é o resultado</p>
+    <input type="number" id="mostraresultado">
+    <script>
+        function meuclick(x, y) {
+            var idinput1 = document.getElementById('soma1');
+            var idinput2 = document.getElementById('soma2')
+            var x = parseInt(idinput1.value);
+            var y = parseInt(idinput2.value);
+            
+            if (  x !== 0 &&  y !== 0){
+                var somar  = x + y;
+                //Aqui ele mostra o resultado da soma
+                document.getElementById('mostraresultado').value = somar;
+                
+            }else{
+                alert('Nesse teste não voce deve digitar o 0 individualmente em nenhum campo!!!');
+                document.getElementById('mostraresultado').value = 0;
+            }
+            
+        }
+    </script>
+</body>
+</html>

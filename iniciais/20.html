@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sorteio</title>
+    </head>
+<body>
+
+
+<p>Click no botão para sortear um número(1-10).</p>
+
+<button onclick="myFunction()">Sortear</button>
+
+<p class="demo"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  
+  document.querySelector(".demo").innerHTML = Math.floor((Math.random() * 10) + 1);
+  var demo = document.querySelector('.demo').innerText;
+  switch (demo){
+      case "1":
+             text = "O vencedor é o Pedro ";
+      break;
+      case "2":
+             text = "O vencedor é  a Ana ";
+      break;
+      case "3":
+             text = "O vencedor é a Carol ";
+      break;
+      case "4":
+             text = "O vencedor é o João ";
+      break;
+      case "5":
+             text = "O vencedor é o David ";
+      break; 
+      case "6":
+             text = "O vencedor é a Carla ";
+      break;
+      case "7":
+             text = "O vencedor é a Marli ";
+      break; case 8:
+             text = "O vencedor é o Miguel";
+      break;
+      case "9":
+             text = "O vencedor é o  Joaquim";
+      break;
+      case "10":
+             text = "O vencedor é a Maria ";
+      break;
+  }
+  document.getElementById("demo2").innerHTML = text;
+
+
+}
+
+
+</script>
+
+</body>
+</html>

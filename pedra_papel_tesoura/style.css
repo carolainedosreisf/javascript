@@ -1,0 +1,104 @@
+ .contorno{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vs{
+    font-size: 50px;
+}
+.jogada h4{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#resultado{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #828282;
+}
+
+.contorno{
+    margin-top: 70px;
+    padding: 15px 25px;
+    border: 3px solid #828282;
+    width: 50%;
+    border-radius: 4px;
+}
+#seu_valor{
+    height: 35px !important;
+    margin-right: 5px;
+}
+.enviar_dados{
+    margin-top: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.decorativo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.decorativo img{
+    width: 200px;
+    height: auto !important;
+    padding: 10px;
+}
+.itens-decorativo{
+    
+}
+@media (max-width:700px){
+    .decorativo img{
+        width: 150px;
+    }
+    .jogada h4{
+        font-size: 40px;
+    }
+    
+}
+@media (max-width:550px){
+    .decorativo img{
+        width: 100px;
+    }
+    .jogada h4{
+        font-size: 30px;
+    }
+}
+@media (max-width:380px){
+    .jogada h4{
+        font-size: 20px;
+    }
+}
+@media (min-width:992px){
+    .padding{
+        padding: 0px 200px;
+    }
+}
+
+.espc{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+#img_voce{
+    float: right;
+}
+#erro{
+    color: #C40000;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+    display: none;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lampada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <img src="lampada.jpg"  onclick="meuclick()" id="minhalampada">
+    <p class="demo"></p>
+    <script>
+        function meuclick() {
+            var click = document.querySelector('#minhalampada').src;
+            
+            if (click.includes('lampada.jpg')){
+                var lampadaexata = document.getElementById('minhalampada');
+                lampadaexata.src = 'lampada-on.jpg';   
+            }else if (click.includes('lampada-on.jpg')){
+                var lampadaexata = document.getElementById('minhalampada');
+                lampadaexata.src = 'lampada.jpg';
+            }
+        }
+    </script>
+</body>
+</html>

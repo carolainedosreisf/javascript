@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CPF 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input type="text" id="cpf">
+    <button onclick="meuclick()">Exibir cpf com pontos e traço</button>
+    <script>
+        function meuclick() {
+            var inputexato = document.getElementById('cpf');
+            var valorinput = inputexato.value;
+            var captura = valorinput.substring(0,3);
+            var insere = captura + ".";
+            var captura2 = valorinput.substring(3,6);
+            var insere2 = captura2 + ".";
+            var captura3 = valorinput.substring(6,9);
+            var insere3 = captura3 + "-";
+            var captura4 = valorinput.substring(9,11);
+            alert(insere + insere2 + insere3 + captura4);
+        }
+    </script>
+</body>
+</html>

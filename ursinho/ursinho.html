@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Ursinho saltitante</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald');
+        h2{
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        #ursinho{
+            width: 10%;
+            margin-left: 0;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>Ursinho saltitante</h2>
+       
+        <img src="chara-1.png" id="ursinho">
+
+
+        <script>
+            function ursinho(){
+               var urso = document.getElementById("ursinho").src;
+                var img = document.getElementById("ursinho");
+                var espaco2 = parseInt(window.getComputedStyle(img).marginLeft) + 25; 
+                               
+                if (urso.includes('chara-1.png') && espaco2 < 1200){
+                    document.getElementById("ursinho").src = 'chara-2.png';
+                    document.getElementById("ursinho").style.marginLeft = espaco2 + 25; 
+                    
+                }else if(urso.includes('chara-2.png')&& espaco2 < 1200){
+                    document.getElementById("ursinho").src = 'chara-3.png' ;
+                    document.getElementById("ursinho").style.marginLeft = espaco2 + 25; 
+                   
+                }else if(urso.includes('chara-3.png')&& espaco2 < 1200){
+                    document.getElementById("ursinho").src = 'chara-2.png' ;
+                    document.getElementById("ursinho").style.marginLeft = espaco2 + 25; 
+                    
+                }else{
+                    document.getElementById("ursinho").src = 'chara-2.png';
+                    document.getElementById("ursinho").style.marginLeft =  0;
+                }
+            }
+            setInterval(ursinho, 500);
+        </script>
+    </body>
+</html>

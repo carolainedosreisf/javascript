@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Sorteador 2</title>
+    </head>
+    <body>
+        <h3>Digite um numero de 1 á 10</h3>
+        <input class="escolha" type="numer">
+        <h3>Agora click no botão para sortear um número de 1 á 10</h3>
+        <button class="sorteio" onclick="meuclick()">Sortear</button>
+        <p class="demo"></p>
+        <p class="demo3"></p>
+        <script>
+            function meuclick(){
+                var class1 = document.querySelector(".escolha").value;
+                if (class1 > 10 || class1 == 0){
+                    alert("Por favor digite um número correto (de 1 a 10)!!!")
+                }else{
+                    document.querySelector('.demo').innerHTML = 'Número sorteado: '+ '<span class="demo2">' + Math.floor((Math.random() *10)+1) + '</span>';
+                    var demo = document.querySelector('.demo2').innerText;
+                    
+                    if(class1 == demo){
+                        text= 'Seu número foi o sorteado :)';
+                    }else{
+                        text = 'Que pena!Seu número não foi o sorteado :(';
+                    }
+                }
+                document.querySelector(".demo3").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

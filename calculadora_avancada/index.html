@@ -1,0 +1,112 @@
+<html>
+    <head><meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculadora avançada</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+    </head>
+    <body>
+        <input id="tela" type="text">
+        <button onclick="cliclou_em_um_numero(1)">1</button>
+        <button onclick="cliclou_em_um_numero(2)">2</button>
+        <button onclick="cliclou_em_um_numero(3)">3</button>
+        <button onclick="cliclou_em_um_numero(4)">4</button>
+        <button onclick="cliclou_em_um_numero(5)">5</button>
+        <button onclick="cliclou_em_um_numero(6)">6</button>
+        <button onclick="cliclou_em_um_numero(7)">7</button>
+        <button onclick="cliclou_em_um_numero(8)">8</button>
+        <button onclick="cliclou_em_um_numero(9)">9</button>
+        <button onclick="cliclou_em_um_numero(0)">0</button>
+        <button onclick="clicou_em_uma_operacao('+')">+</button>
+        <button onclick="clicou_em_uma_operacao('-')">-</button>
+        <button onclick="clicou_em_uma_operacao('*')">x</button>
+        <button onclick="clicou_em_uma_operacao('/')">÷</button>
+        <button onclick="clicou_em_uma_operacao('=')">=</button>
+        <button onclick="limpa_tudo()">CE</button>
+        <button onclick="limpa_ultimo()">C</button>
+
+        <script>
+            valor_armazenado = null;
+            valor_armazenado_para_operacao =  null;
+            operacao_armazenada= null;
+            function tela(){
+                document.querySelector('#tela').value = valor_armazenado;
+            }
+            function cliclou_em_um_numero(valor_clicado){
+
+                if(valor_armazenado == null){
+                    valor_armazenado = valor_clicado
+                }else{
+                    valor_armazenado = ("" + valor_armazenado + valor_clicado);     
+                }
+                tela();
+            }
+            function limpa_tudo(){
+                valor_armazenado = null;  
+                tela();
+            }
+            function limpa_ultimo(){
+                valor_armazenado = valor_armazenado.substring(0,(valor_armazenado.length - 1));
+                tela();
+                
+            }
+            function adicao(){
+                valor_armazenado = parseInt(valor_armazenado_para_operacao) + parseInt(valor_armazenado);
+                tela();
+                
+            }
+            function subtracao(){
+                valor_armazenado = parseInt(valor_armazenado_para_operacao) - parseInt(valor_armazenado);
+                tela();
+                valor_armazenado_para_operacao =  valor_armazenado;
+                valor_armazenado = null;
+            }
+            function multiplicacao(){
+                valor_armazenado = parseInt(valor_armazenado_para_operacao) * parseInt(valor_armazenado);
+                tela();
+                valor_armazenado_para_operacao =  valor_armazenado;
+                valor_armazenado = null;
+            }
+            function divisao(){
+                valor_armazenado = parseInt(valor_armazenado_para_operacao) / parseInt(valor_armazenado);
+                tela();
+                valor_armazenado_para_operacao =  valor_armazenado;
+                valor_armazenado = null;
+            }
+            function clicou_em_uma_operacao(operacao_clicada){
+                switch (operacao_clicada){
+                    case '+':
+                        operacao_armazenada= '+';
+                    break;
+                    case '-':
+                        operacao_armazenada= '-';
+                    break;
+                    case '*':
+                        operacao_armazenada= '*';
+                    break;
+                    case '/':
+                        operacao_armazenada= '/';
+                    break;
+                }
+                if (operacao_clicada == "-" || operacao_clicada == "+" || operacao_clicada == "*" || operacao_clicada == "/"){
+                    valor_armazenado_para_operacao = valor_armazenado;
+                    valor_armazenado = null;
+                    tela();
+                }else if (operacao_clicada == "="){
+                    if (operacao_armazenada == "+"){
+                       adicao(); 
+                    }else if (operacao_armazenada == "-"){
+                        subtracao();
+                    }else if (operacao_armazenada == "*"){
+                        multiplicacao();
+                    }else if (operacao_armazenada == "/"){
+                        divisao();
+                    }
+                }
+            }
+            
+
+            
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            Mês seguinte
+        </title>
+    </head>
+    <body>
+        <p class="demo"></p>
+    </body>
+    <script>
+    var d = new Date;
+    var mseguinte = d.getMonth() + 2;
+
+    switch(mseguinte){
+        case 1:
+        text = "Janeiro";
+        break
+        case 2:
+        text = "Fevereiro";
+        break
+        case 3:
+        text = "Março";
+        break
+        case 4:
+        text = "Abril";
+        break
+        case 5:
+        text = "Maio";
+        break
+        case 6:
+        text = "Junho";
+        break
+        case 7:
+        text = "Julho";
+        break
+        case 8:
+        text = "Agosto";
+        break
+        case 9:
+        text = "Setembro";
+        break
+        case 10:
+        text = "Outubro";
+        break
+        case 11:
+        text = "Novembro";
+        break
+        case 12:
+        text = "Dezembro";
+        break
+    }
+    document.querySelector(".demo").innerHTML ='O mes seguinte será: '+ text;
+    </script>
+</html>

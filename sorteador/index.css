@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+#conteudo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+#titulo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    
+}
+
+#error{
+    color: red;
+    font-size:  16px;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 15px;
+
+}
+input{
+    width: 75px;
+    height:  55px;
+    font-size: 22px;
+}
+
+.chances2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;  
+    
+}
+
+#chances{
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border: 2px solid black;
+    background: #7c0b01;
+    color: white;
+   
+}
+
+button{
+    background: white;
+    padding: 13px 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    border : 2px solid black;
+}
+
+button:hover{
+    background: #ced4dd;
+}
+#numeroChances{
+    margin-bottom: 30px;
+}
+
+#contorno{
+    width: 50%;
+    border: 10px solid black;
+    border-radius: 4px;
+    padding: 20px
+   
+}
+
+@media (max-width: 1000px){
+    #contorno{
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px){
+    #contorno{
+        width: 100%;
+    }
+}

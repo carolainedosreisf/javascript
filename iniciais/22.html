@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Data</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald');
+        span{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+            font-size: 60px;
+            border: 3px solid black;
+            padding: 20px 10px;
+            width: 25%;
+            margin-top: 30%;
+        }
+        </style>
+    </head>
+    <body>
+        <span class="demo"></span>
+
+        <script>
+            var d = new Date;
+            document.querySelector('.demo').innerHTML = `${d.getDate()}/ ${d.getMonth() + 1}/${d.getFullYear()}`;
+        </script>
+    </body>
+</html>

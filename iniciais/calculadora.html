@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+        <style>
+        button {
+          display: inline;
+          font-size: 1.2em;
+        }
+
+        #txt {
+          width: 90%;
+          height: 200px;
+        }
+        </style>
+    </head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="mostraresultado">0</div><br>
+<button value="0" style="display:none" class="badge">0</button>
+<button value="+" class="badge" onclick="operacao('somar')">+</button>
+<button value="-" class="badge" onclick="operacao('subtrair')">-</button>
+<button value="1" class="badge" onclick="calcNum(1)">1</button>
+<button value="2" class="badge" onclick="calcNum(2)">2</button>
+<button value="3" class="badge" onclick="calcNum(3)">3</button><br><br>
+<textarea id="area">0</textarea><br><br>
+<script>
+  
+    
+ 
+  
+  
+  var contador = document.querySelector('.badge');
+  var resposta = document.getElementById("mostraresultado");
+
+  function calcNum(numero){
+    if (typeof conteudo == 'undefined'){
+      document.querySelector('#area').value = '';
+    }
+    document.getElementById("area").value= document.getElementById("area").value +  numero;
+    conteudo = 0;
+  }
+
+
+
+  function operacao(oper, valor1, valor2){
+    if (oper == 'somar'){
+      var resultado = parseInt(valor1) + parseInt(valor2);
+    }else{
+      var resultado = valor1 - valor2;
+    }
+    document.querySelector("#area").innerHTML = resultado;
+  }
+  
+  $('button').click(function(e){
+      var numero = parseInt(contador.textContent) + 1;
+      contador.textContent = numero;
+      resposta.innerHTML = numero;
+  
+   });
+</script>
+
+</body>
+</html>

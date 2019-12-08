@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+span{
+    padding: 4px;
+}
+#anderline{
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 40px;
+}
+#demo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;  
+}
+
+#forcadesenho{
+    width: 60%;
+    
+}
+
+@media only screen and (max-width:991px)and (min-width:500px){
+    .contorno{
+      width: 80%;  
+      border:none !important;
+    }
+    #forcadesenho{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    
+    
+}
+@media only screen and (max-width:600px)and (min-width:351px){
+    span{
+        padding: 3px !important;
+    }
+    .contorno{
+      border:none !important;
+        
+    }
+    #forcadesenho{
+        margin-bottom: 30px;        
+    }
+}
+@media only screen and (max-width:350px){
+    span{
+        padding: 1px !important;
+    }
+    .contorno{
+      border:none !important;
+        
+    }
+    #forcadesenho{
+        margin-bottom: 20px; 
+        width: 90%;       
+    }
+}
+#venceu{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-title{
+    padding: 10px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+}
+.contorno{
+    margin-top: 8%;
+    border: 10px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: white !important;
+    
+    
+}
+.botao{
+    border-radius: 4px;
+    margin-top: 20px;
+    padding:  7px 15px;
+    border: 3px solid black;
+    background: white;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+.botao:hover{
+    background: #e1e7f2;
+}
+.botao2:hover{
+    background: #e1e7f2;
+}
+
+.botao2{
+    border-radius: 4px;
+    padding:  3px 7px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px; 
+    margin-left: 5px;
+}
+
+#error{
+    color: red;
+    margin-top: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+#sucess{
+    color: green;
+    margin-top: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+.modal-body{
+    color: red;
+    margin-top: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    text-align: center;
+}

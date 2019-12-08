@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Pedra, papel, tesoura</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="enviar_dados">
+            <select id="seu_valor">
+                <option value="999">selecione</option>
+                <option value="0">pedra</option>
+                <option value="1">papel</option>
+                <option value="2">tesoura</option>
+            </select>
+            
+            <button onclick="acao()" class="btn btn-success">Enviar</button><br><br>
+           
+        </div>
+        <p id="erro">Por favor selecione um valor.</p>
+        <div class="itens-decorativo">
+           
+                <div class="decorativo">
+                    <img src="pedra.png" alt="">
+                    <img src="papel.png" alt="">
+                    <img src="tesoura.png" alt="">
+                </div>
+        </div>
+        
+        
+        <div class="container jogada" style="display: none">
+            <div class="row padding">
+                <div class="espc">
+                        <h4>Adversário</h4>
+                        <h4>x</h4>
+                        <h4>Você</h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    
+                    <img src=""  id="img_adversario">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    
+                    <img src="" id="img_voce">
+                </div>
+            </div>
+            <div class="row contorno">
+                <h2 id="resultado"></h2>
+            </div>
+        </div>
+        
+
+        <script>
+            function acao(){
+                var seu_valor = parseInt(document.querySelector("#seu_valor").value);
+                var adversario  = Math.floor(Math.random() * 3);
+                
+                var tam_img_adv = document.querySelector("#img_adversario");
+                var tam_img_voce = document.querySelector("#img_voce");
+                var msg_resultado =document.querySelector("#resultado");
+
+                switch (adversario){
+                   
+                    case 0:
+                        var img_adversario = 'pedra.png';
+                        tam_img_adv.style.width  = '85%';
+                    break;
+                    case 1:
+                        var img_adversario = 'papel.png';
+                        tam_img_adv.style.width  = '60%';
+                    break;
+                    case 2:
+                        var img_adversario = 'tesoura.png';
+                        tam_img_adv.style.width  = '60%';
+                    break;
+                }
+                switch (seu_valor){
+                    case 0:
+                        var img_voce = 'pedra.png';
+                        tam_img_voce.style.width = '85%';
+                    break;
+                    case 1:
+                        var img_voce = 'papel.png';
+                        tam_img_voce.style.width = '60%';
+                    break;
+                    case 2:
+                        var img_voce = 'tesoura.png';
+                        tam_img_voce.style.width = '60%';
+                    break;
+                }
+                if (seu_valor == 999){
+                    document.querySelector('#erro').style.display = "block";
+                    document.querySelector(".itens-decorativo").style.display = 'block';
+                    document.querySelector(".jogada").style.display = 'none';
+
+
+                }else{
+                    document.querySelector('#erro').style.display = "none";
+                    document.querySelector(".jogada").style.display = 'block';
+                    document.querySelector(".itens-decorativo").style.display = 'none';
+                    tam_img_adv.src = img_adversario;
+                    tam_img_voce.src = img_voce;
+
+                    if (adversario == seu_valor){
+
+                        msg_resultado.innerHTML = 'Empatou';
+
+                    }else if (adversario == 2 && seu_valor == 0){
+
+                        msg_resultado.innerHTML = 'Você venceu';
+
+                    }else if (adversario == 0 && seu_valor == 1){
+
+                        msg_resultado.innerHTML = 'Você venceu';
+
+                    }else if (adversario == 1 && seu_valor == 2){
+
+                        msg_resultado.innerHTML = 'Você venceu';
+
+                    }else if (adversario == 0 && seu_valor == 2){
+
+                        msg_resultado.innerHTML = 'Você perdeu';
+
+                    }else if (adversario == 1 && seu_valor == 0){
+
+                        msg_resultado.innerHTML = 'Você perdeu';
+
+                    }else if (adversario == 2 && seu_valor == 1){
+
+                        msg_resultado.innerHTML = 'Você perdeu';
+
+                    }
+                }
+                
+                
+            }
+        </script>
+    </body>
+</html>

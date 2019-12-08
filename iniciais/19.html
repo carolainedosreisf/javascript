@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tabuada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald');
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        span#resultado{
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+        
+        }
+        span#conta{
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+        }
+        hr{
+            border: solid 1px black;
+        }
+        #hr{
+            width: 8%
+        }
+    </style>
+</head>
+<body>
+      
+    <div id="demo2">
+        
+    </div>
+    <script>
+        var text = "";
+        var x;
+
+        for( x = 0; x <= 10; x++){
+            var  multiplica = 7 * x;
+            text = `<span id="conta">${text} 7  x  ${x}  =</span> <span id="resultado">${multiplica} </span><div id="hr"><hr></div>`;
+        }
+        document.getElementById("demo2").innerHTML = text;
+   
+       // while( x <= 10){
+            //var  multiplica = 7 * x;
+         
+            //text = text +  7 + " x " + x  + " = " + multiplica + "<br>";
+           
+            
+       //}
+    
+        //document.getElementById("demo2").innerHTML = text;
+    </script>
+    
+    
+    
+</body>
+</html>
+

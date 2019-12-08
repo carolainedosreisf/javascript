@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Aritmética</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body> 
+        <div class="tudo">
+        
+            <div class="contorno container">
+                <header>
+                    <div class="row">
+                        <button id="mais" onclick="adicao()" class="escolha">Quero calcular adição</button><br>
+                        <button id="menos" onclick="subtracao()" class="escolha">Quero calcular subtração</button><br>
+                        <button id="divisao" class="escolha" onclick="divisao()">Quero calcular divisão</button><br>
+                        <button id="vezes" class="escolha" onclick="multiplicacao()">Quero calcular multiplicação</button><br>
+                    </div>
+                </header>    
+            </div>
+                
+        
+            <div class="container contorno2 todosfundo">
+                
+            <div class="">
+                <div class="row row2">    
+                    
+                                
+                    <div class="col-md-1 col-sm-1 col-xs-2 cel3">
+                            <p id="sinal">+</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3 cel2">
+                        <div id="numeros">
+                            
+                            <p id="n1" class="ps"></p>  
+                            <p id="n2" class="ps"></p>
+                            <div class="linha"></div>
+                            
+                            <div id="inputs">
+
+                            </div>
+                            
+                            <p id="resultado"></p>
+                        </div>
+                    </div>
+                    <span class="resposta col-md-8 col-sm-8 col-xs-4 cel" >
+                        <p id="msgAdicaoSubtracao">Enter para enviar...</p>
+                        <button id="novaPartida" onclick="novojogo()">Nova partida</button>
+                    </span>
+                                    
+                        
+                </div>
+            </div>    
+            </div>
+            <div class="container contorno3 todosfundo" >
+                
+                <div class="">
+                    <div class="row row2">    
+                        
+        
+                        <div class="col-md-12 col-sm-12 col-xs-12 ">
+                            
+                            <span id="numeros">
+                                <span id="n3" class="ps"></span>  
+                                <span id="sinal2" class="ps">÷</span>  
+                                <span id="n4" class="ps"></span>
+                                <span> = </span>
+                                <input type="number" id="resultado2" onkeyup="enterDivisao(event)">
+                                <input type="number" id="resultado3" onkeyup="enterMultiplicacao(event)" style="display: none">
+                            </span>
+                        </div>
+                        <span class="resposta col-md-12 col-sm-12 col-xs-12" >
+                            <br>
+                            <p id="msgDivisaoMultiplicacao">Enter para enviar...</p>
+                            <button  class="novaPartida2" onclick="novojogo()">Nova partida</button>
+                        </span>
+                                    
+                                        
+                                
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <div class="div-ajax-carregamento"><img class="img-gif" src="load2.gif" style=" width:20%"/></div>
+      
+    
+    <script>
+        $(document).ready(function(){
+            $('.div-ajax-carregamento').fadeOut(2900);
+            
+        });
+              
+         
+    </script>
+    <script src="script.js"></script>
+
+</body>    
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head><meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculadora avançada</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <style>
+            form p.botao {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                background-color: #b2b2b2;
+                user-select: none;
+                cursor: pointer;
+            }
+
+        </style> 
+    </head>
+    <body>
+        <form name="calcform">
+            <input id="visor" name="visor" type="text">
+            <p class="botao" value="1" onclick="cliclou_em_um_numero(1)">1</p>
+            <p class="botao" value="2" onclick="cliclou_em_um_numero(2)">2</p>
+            <p class="botao" value="3" onclick="cliclou_em_um_numero(3)">3</p>
+            <p class="botao" value="4" onclick="cliclou_em_um_numero(4)">4</p>
+            <p class="botao" value="5" onclick="cliclou_em_um_numero(5)">5</p>
+            <p class="botao" value="6" onclick="cliclou_em_um_numero(6)">6</p>
+            <p class="botao" value="7" onclick="cliclou_em_um_numero(7)">7</p>
+            <p class="botao" value="8" onclick="cliclou_em_um_numero(8)">8</p>
+            <p class="botao" value="9" onclick="cliclou_em_um_numero(9)">9</p>
+            <p class="botao" value="0" onclick="cliclou_em_um_numero(0)">0</p>
+            <p class="botao" value="+" onclick="clicou_em_uma_operacao('+')">+</p>
+            <p class="botao" value="-" onclick="clicou_em_uma_operacao('-')">-</p>
+            <p class="botao" value="X" onclick="clicou_em_uma_operacao('*')">x</p>
+            <p class="botao" value="÷" onclick="clicou_em_uma_operacao('/')">÷</p>
+            <p class="botao" value="=" onclick="clicou_em_uma_operacao('=')">=</p>
+            <p class="botao" value="CE" onclick="limpa_tudo()">CE</p>
+            <p class="botao" value="C" onclick="limpa_ultimo()">C</p>
+        </div>
+    </body>
+    <script>
+        
+        function cliclou_em_um_numero(numero){
+            document.querySelector('#visor').value = document.querySelector('#visor').value + numero;
+            gvisor = 1;
+        }
+        
+        function clicou_em_uma_operacao(){
+            var valor = document.querySelector('#visor').value;
+            delete gvisor;
+        }
+    </script>
+</html>
